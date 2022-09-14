@@ -15,11 +15,11 @@ Feature: Validate Rover Movement
       | 1            | 1            | 1         |
       | 2            | 3            | 2         |
       | 3            | 5            | 3         |
-      | 5            | 10           | 4         |
-      | 5            | 8            | 1         |
+      | -5           | -10          | 4         |
+      | -5           | -8           | 1         |
       | 6            | 9            | 2         |
       | 7            | 10           | 3         |
-      | 8            | 15           | 4         |
+      | -8           | -15          | 4         |
 
   @SmokeTest
   Scenario Outline: Validate Rover Move Action
@@ -34,5 +34,5 @@ Feature: Validate Rover Movement
       | 0            | 0            | 2         | LMLMLMLMM | 1                | 0                | 2             |
       | 0            | 1            | 3         | LMLMLLLMM | 3                | 2                | 2             |
       | 1            | 0            | 4         | LMLMLRLMM | 2                | 1                | 1             |
-
-     
+      | 1            | 0            | 4         | LMLMLLLMM | 2                | -3               | 3             |
+      | 0            | -1           | 4         | LMLMLLLMM | 1                | -4               | 3             |
